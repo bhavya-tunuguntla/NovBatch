@@ -181,6 +181,80 @@ ________________________________________________________________________________
 
 
 
+Group By : Used to generate summarized report on the field specified. 
+
+having : Used to check condition on summarized fields. (Group By Clause generates records, those records you have to filter,
+then we need the help of having clause).
+
+Joins : Joins are used to extract data from more than one table. 
+
+There are different types of joins known as 
+
+1) Inner Join : Acts as an INTERSECT Operator, used to extract only the common records from the given table(s).
+
+SELET Field1,Field2,Field3 ...
+FROM TABLE1 INNER JOIN TABLE 2 ON
+PrimaryKey=ForeignKey 
+
+2) Outer Join : In outer Join we have
+
+	-> LEFT OUTER  : All records from the left-side table, and matching records from the right-side table, and if the values
+			are not available, then it would be replaced with NULL keyword. 
+
+	-> RIGHT OUTER : All records from the right-side table, and matching records from the left-side table. if the values are
+			  not available, then it would be replaced with NULL keyword. 
+
+3) Cross Join : Generates the cartician product of given tables. For this no join keyword required. If table A contains n records,
+and Table B contains m records, then the carticiant product will be (n*m) records will be displayed. 
+
+4) Self Join  : If a table joins with itself, then its known as self join. 
+
+
+
+1) Display the first day of the previous month
+
+2) Display Day Name of the current month last date
+
+3) Add  5 years 10 months and 11 days to today's date
+
+4) Display all fridays of the current month
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

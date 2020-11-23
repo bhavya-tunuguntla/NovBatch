@@ -33,3 +33,5 @@ FROM Agent A RIGHT JOIN AgentPolicy AP
 ON A.AgentID=AP.AgentID
 RIGHT JOIN Policy P On 
 P.PolicyID=AP.PolicyID;
+
+

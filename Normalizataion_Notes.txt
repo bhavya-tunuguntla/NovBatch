@@ -1,0 +1,170 @@
+Record-Based Model : 
+
+	Hierarchical Model
+
+	Network Model
+
+	Relational Model 
+
+
+Record Based Models : 
+
+1) Hierarchical model : Data is represented in the form of tree, data in hierarchical model is represented by a collection of records and relationships between the data are represented by links. 
+
+2) Network Model : similar to hierarchical model in the way that the data and the relationships among them are represented in the form of records and links. You can represent the records in the daabase graphically. 
+
+3) Relational Model : A table in the database has fixed record length with fixed number of attribute or fields. 
+
+The row in a table is called tuple and the column is called an attribute. Every column in the table must have a unique name, the no.of tuples is called the cardinality of the table, and the no.of attributes is called the degree of the table. 
+
+
+Keys : A RDBMS uses associative addressing, that is it identifies and lcoates rows by value. The physical address is transparent to the user. Therefore, relational system require keys. 
+
+
+Employ(Ecode,Ename,Job,Sal,SalDate,AadharNo,City) 
+
+1,Nov-2020
+1,Dec-2020
+
+(i) Candidate Key : Any key that which uniquely identifies rows of a table known as Candidate Key. 
+			(Ecode, AadharNo) 
+
+(ii) Primary Key : One of the candidate key needs to be chosen as primary key based on priority. Primary Key column cannot be null and no duplicate entries. (Ecode) 
+
+(iii) Alternate Key : Any key that which is Candidate key, but not primary key known as alternate key. (AadharNo) 
+
+(iv) Composite Key : Any key that which uniquely identifies rows of a table, made up of more than one attribute known as composite
+			key. (Ecode+SalDate) 
+
+(v) : Foreign Key : Primary key in the parent table will be foregin key in the child table. 
+
+
+Employ(Empno+,name,dept,desig,sal)
+Leave(LeaveId+,Empno-,Lavail,Ltaken,Lop)
+
+Employ table Empno is Primary Key, and Empno in leave Table will be foreign key. 
+
+
+1) Primary 
+2) Foreign 
+3) Candidate 
+4) Alternate
+5) Composite 
+
+_______________________________________________________________________________________________________________
+
+
+Normalization is a scietific method of breaking down the complex table structures into simple table structrues by using certain rules.  Using this method, you can reduce the redundancy in a table and eliminate the problems of inconsistency and disk space usage.  
+
+PROJECT(Ecode,Ename,DeptCode,DEPTHEAD,PROJCODE,HOURS)
+
+   E101,Sheik,D001,Supraja,{P123,P224,P255},{88,77,44}
+
+First Normal Form : A table said to be in 1NF, when each cell constains precisely one value (Atomic Value) 
+
+This data is not normalized, because PROJCODE and HOURS have more than one value. 
+
+
+By Applying 1NF,
+
+E101,Sheik,D001,Supraja,P123,88
+E101,Sheik,D001,Supraja,P224,77
+E101,Sheik,D001,Supraja,P255,44
+
+To ensure, table normalized or not, we have to check for 3 anomolies 
+
+PROJECT(Ecode,Ename,DeptCode,DEPTHEAD,PROJCODE,HOURS)
+
+1) INSERT : The department of the particular employee cannot be recorded until the employee is assigned a project. 
+
+2) UPDATE : The Employee Code, Department Name, and department head are repeated several times, if an employee is transferred to another dept. this change will have to be recorded in every row of the EMPLOYEE table pertaining to that employee. 
+
+3) DELETE : When an employee completes work on the project, the employee's record to be deleted. The info. regarding the department to which the emplyee belongs and project information will also to be lost. 
+
+
+*** 1NF inadequate *** 
+
+So, please switch to 2NF. 
+
+Second Normal Form : A table is said to be in 2NF, when it is in 1NF and every attribute in the row is functionally dependent upon the whole key, and not just part of the key.
+
+Guidelines : 
+
+	-> Find and remove attributes that are functinally dependent on whole key, but not on part of key. 
+	-> Group the remaining attributes. 
+
+Employ(Ecode+,Ename,DeptCode,DeptHead)
+Project(Ecode-,ProjCode+,Hours) 
+
+E101,Sheik,D123,Murugan
+E102,Neelanjana,D123,Murugan
+E103,Sekhar,D123,Murugan
+
+E101,P123,885
+E101,P234,88
+E101,P887,7333
+
+INSERT : The DEPTHEAD of a new dept that does not have any employees at the present cannot be entered in the DEPTHEAD column. 
+
+UPDATE : the DEPTHEAD is repeated several times, hence if a dept head moves to another dept, the change will have to be made consistently across the table. 
+
+DELETE : If the record of the employee is deleted, then the information regarding the head of the dept will also to be deleted. Hence there will be a loss of information. 
+
+*** Second Normal Form Inadequate, please switch to Third Normal Form ***
+
+Employ(Ecode+,Ename,DeptCode,DeptHead)
+Project(Ecode-,ProjCode+,Hours) 
+
+Third Normal Form 
+
+A table said to be in 3NF, when it is in 2NF, Every attribute needs to be dependent on whole key but not transitively. 
+
+Guidelines : 
+
+	-> Find and remove attributes that are transitively dependent on whole key
+
+	-> Group the remaining attributes. 
+
+
+By Applying, 3NF
+
+Dept(DeptCode+,DeptHead)
+Employ(Ecode+,Ename,DeptCode-)
+Project(Ecode-,ProjCode+,Hours) 
+
+PROJECT(Ecode,Ename,DeptCode,DEPTHEAD,PROJCODE,HOURS)
+
+After 3NF, we have given solution as
+
+Dept(DeptCode+,DeptHead)
+Employ(Ecode+,Ename,DeptCode-)
+Project(Ecode-,ProjCode+,Hours) 
+
+
+1NF -> Atomic Values (Each cell precisely contians one value)
+
+2NF -> Functional Dependency 
+
+3NF -> Transitive Dependency 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

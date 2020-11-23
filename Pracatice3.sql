@@ -28,6 +28,45 @@ select count(comm) from Emp;
 
 select rno from Emp;
 
-SELECT    
-    ROW_NUMBER() OVER(PARTITION BY SAL) AS row_num  
-FROM EMP;  
+select sum(sal) from Emp;
+
+select job from Emp;
+
+select job,sum(sal) from Emp
+group by job;
+
+select job,sum(sal),avg(sal),Max(sal),min(sal),count(*) from Emp
+group by job;
+
+select job,sum(sal),avg(sal),Max(sal),min(sal),count(*) from Emp
+group by job
+having count(*) > 1;
+
+
+select job,sum(sal),avg(sal),Max(sal),min(sal),count(*) from Emp
+WHERE JOB IN('ANALYST','CLERK','MANAGER')
+group by job
+having count(*) > 1;
+
+select job,sum(sal),avg(sal),Max(sal),min(sal),count(*) from Emp
+WHERE JOB IN('ANALYST','CLERK','MANAGER')
+group by job
+having count(*) > 1
+ORDER BY max(sal) desc;
+
+
+select job,sum(sal),avg(sal),Max(sal),min(sal),count(*) from Emp
+group by job
+having min(sal) > 2000;
+
+select job,sum(sal),avg(sal),Max(sal),min(sal),count(*) from Emp
+WHERE JOB IN('ANALYST','CLERK','MANAGER')
+group by job
+having count(*) > 1
+ORDER BY max(sal) desc;
+
+
+
+
+
+

@@ -150,6 +150,51 @@ Project(Ecode-,ProjCode+,Hours)
 AgentDetails(AgentId,AgentName,AgentCity,AgentCountry,Gender,DateOfBirth,PolicyID,PremiumAmount,InstallMentAmount,
 PaymentMode,PaymentDate) 
 
+First Normal Form : A table said to be in 1NF, when each cell precisely contians one value (Atomic Values) 
+
+
+Insert : Agent Record cannot be inserted until Policy Comes 
+
+Update : AgentID,AgentName all are repeated multiple times, if any change inform persists to lot of records. 
+
+Delete : If any Agent resigns his job, all policy information also to be lost. 
+
+so 1NF inadequate, switch to 2NF 
+
+Second Normal Form : 
+
+Agent(AgentId+,AgentName,AgentCity,AgentCountry,Gender,DateOfBirth)
+Policy(AgentID-,PolicyId+,PremiumAmount,Installment,PaymentMode,PaymentDate) 
+
+
+Insert : Policy Record cannot be inserted till AgentID exists (Wrong as transitive Dependency) 
+
+2NF Inadequate, 
+
+3NF : Remove Transitive Dependency 
+
+Agent(AgentId+,AgentName,AgentCity,AgentCountry,Gender,DateOfBirth)
+Policy(PolicyId+,PremiumAmount,Installment,PaymentMode,PaymentDate) 
+AgentPolicy(AgentID-,PolicyID-)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

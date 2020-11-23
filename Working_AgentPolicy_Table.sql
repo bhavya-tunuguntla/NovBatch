@@ -1,6 +1,6 @@
 use hexanew;
 
-Drop table AgentPolicy;
+Drop table if exists AgentPolicy;
 
 create table AgentPolicy
 (

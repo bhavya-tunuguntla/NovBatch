@@ -1,4 +1,4 @@
-use hexasept;
+use hexanew;
 
 Drop table AgentPolicy;
 

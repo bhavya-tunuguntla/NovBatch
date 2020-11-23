@@ -23,6 +23,7 @@ select round(8767.8878,2);
 select round(8767.8878,1);
 select round(8767.8878,0);
 select round(8767.8878,-1);
+select round(8764.8878,-1);
 select round(8767.8878,-2);
 select round(8767.8878,-3);
 

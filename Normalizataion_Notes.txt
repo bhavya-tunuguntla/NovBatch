@@ -177,6 +177,10 @@ Agent(AgentId+,AgentName,AgentCity,AgentCountry,Gender,DateOfBirth)
 Policy(PolicyId+,PremiumAmount,Installment,PaymentMode,PaymentDate) 
 AgentPolicy(AgentID-,PolicyID-)
 
+_____________________________________________________________________________________________________________________
+
+
+
 
 
 

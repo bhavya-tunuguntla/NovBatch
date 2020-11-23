@@ -147,6 +147,9 @@ Project(Ecode-,ProjCode+,Hours)
 
 3NF -> Transitive Dependency 
 
+AgentDetails(AgentId,AgentName,AgentCity,AgentCountry,Gender,DateOfBirth,PolicyID,PremiumAmount,InstallMentAmount,
+PaymentMode,PaymentDate) 
+
 
 
 

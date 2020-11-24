@@ -55,6 +55,157 @@ having sal > 3000;
 -- Having only used to aggregates. 
 
 
+____________________________________________________________________________________________________
+
+There are different types of commands in SQL as 
+
+
+1) DDL  -> Data Definition Language 
+
+
+		Create, Alter, Drop, Truncate 
+
+2) DML  -> Data Manipulation Language. 
+
+	INSERT  - used to add new records
+	UPDATE  -> Used to modify existing records
+
+	Update table_name set Field1=value,field2=value {where condition} 
+
+	DELETE  -> Used to delete unnecessary records. 
+
+3) DQL
+
+4) DCL 
+
+
+
+DataTypes : 
+______________
+
+INT,
+FLOAT,
+DOUBLE,
+numeric,
+char(10)
+varchar(10) 
+date,
+enum
+
+'123',
+
+char(10) assume you are using only 5 characters then remaining memory will be wasted. 
+
+varchar(10) assume you are using only 5 characters remaining memory will be added back. 
+
+enum
+
+Employ(Empno,Name,Dept,Desig,Basic) 
+
+	Empno -> int
+	Name -> varchar(30),
+	Dept -> varchar(30)
+	Desig -> varchar(30)
+	Basic -> number 
+
+
+Empno -> Primary Key
+Name -> NOT NULL
+
+You can create a table as 
+
+CREATE TABLE TABLE_NAME 
+
+Data Integrity : It is imp. to ensure that the data stored in tables is complete and consistent.  The concept of maintaining consistency and completeness of data is called data integrity.  It is enforced to ensure that the data in the database is accurate, consistent and reliable.  
+
+1) Entity Integrity : Ensures that each row can be uniquely identified by an attribute called the primary key. The primary key column contains unique value in all the rows. This column cannot be NULL. 
+
+2) Domain Integrity : Ensures that only a valid range of values is stored in a column. It can be enforced by restricting the type of data.  For suppose the dept field need to contain the list of values as 'computers' or 'physics' or 'maths' then it is coming under the part of domain integrity. 
+
+3) Referential Integrity : Ensures that the values of the foreign key match the values of the corresponding primary key. 
+
+
+
+Student(Sno,Name,DateOfBirth,Sub1,Sub2,Sub3,Total,Aveg) 
+
+Sno -> Primary Key
+Name -> Not Null
+
+______________________________________________________________________________________________________________________
+
+
+Employee(Empno+,Ename,Job,Gender,City)
+Accounts(Empno-,AccountID+,Salary,SalDate)
+
+Empno => Auto_Increment 
+
+AccountID => Auto Increment 
+
+Empno is foreign key in Accounts table 
+
+Alter command used to add/modify/delete columns from the given table. 
+
+How to add a column 
+
+Alter table table_name add column data_type;
+
+To modify the column 
+
+alter table table_name modify column new_type;
+
+To drop a column 
+
+alter table table_name drop column column_name;
+
+How to add primary Key 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

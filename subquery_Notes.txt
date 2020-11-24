@@ -1,0 +1,73 @@
+Subqueries : 
+_____________
+
+Sometimes its not possible to extract data by using single SELECT Statement, for this we need the help of subqueries. 
+
+A subquery is a query, that which is having another query inside. The query which is inside known as inner query, 
+the query which is outside known as outer query. Everytime, the result of the inner query will be send as input to the outer query. 
+
+
+1) How to Display Max. Salary 
+
+select max(sal) from Emp;
+
+2) Display name of the person who is getting max. salary 
+
+select ename from emp where sal=max(sal);
+
+Display IDLE Agents 
+
+If subquery returns more than one value, then we have to use 2 operators as 
+
+ALL 
+
+ANY 
+
+ALL acts as AND Operator
+
+ANY acts as OR Operator 
+
+
+EMPNO<> ALL(10,20,30) means 
+
+Empno<> 10 AND Empno <> 20 AND Empno <> 30 
+
+
+EMPNO <> ANY(10,20,30) Means 
+
+Empno <> 10 OR Empno <> 20 OR Empno <> 30 
+
+
+
+select empno,sum(sal) from Emp 
+where sum(sal) > 5000;
+
+-- aggregate functions cannot be used in where clause
+
+
+select * from Customer where customerId = (select CustomerId from Orders);
+
+-- Subquery returns more than one value.
+
+select empno,ename,sal from Emp
+having sal > 3000;
+
+-- Having only used to aggregates. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

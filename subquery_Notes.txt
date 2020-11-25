@@ -159,7 +159,7 @@ alter table table_name drop column column_name;
 
 How to add primary Key 
 
-
+	
 
 
 

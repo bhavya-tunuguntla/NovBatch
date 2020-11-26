@@ -276,6 +276,50 @@ if you have bill for 250 units means
 
 
 
+_______________________________________________________________________________________________________________
+
+
+Looping Control Structures : 
+_______________________________
+
+1) while loop : 
+
+	This loop executes all the statements repeatedly until the condition remains true, if the condition remains false, then it
+comes out of the loop. For every loop, basically there are 3 phases as 
+
+	(i) Initialization
+
+	(ii) Condition
+
+	(iii) Increment/Decrement 
+
+
+initialization performed at the beginning of the loop. 
+
+Condition performed at the conditional part of the loop.
+
+increment/decrement performed before closing the loop. 
+
+while(condition) {
+...
+...
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

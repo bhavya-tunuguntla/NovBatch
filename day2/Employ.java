@@ -5,7 +5,9 @@ public class Employ {
 
     @Override
     public String toString() {
-        return String.format("%d %s %f",empno, name,basic);
+       // return System.out.println()
+       // return String.format("%d %s %f",empno, name,basic);
+       return "Empno  " +empno+ " Name " +name+ " Basic " +basic;
     }
 
     public static void main(String[] args) {

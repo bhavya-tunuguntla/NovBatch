@@ -1,0 +1,117 @@
+Constructor : 
+
+Used to initilize the member variables of the class. It is special because it has the same name as that of class name. 
+
+Rules : 
+_______
+
+	(i) It will not contains any return type.
+
+	(ii) It will not return any value.
+
+	(iii) it will be invoked automatically once instance of the class created. 
+
+	(iv) A constructor can be overloaded. 
+
+Types of Constructors : 
+________________________
+
+There are 2 types of constructors as 
+
+1) static constructor : These are called class constructors which are used to initilize the static variables of the class. 
+These constructors are invoked automatically before control reaches the entry point.  These constructors cannot be overloaded. 
+
+*** we don't have any static constructor in java, only we have to use static { } as static constructor ***
+
+2) instance constructor : These are the constructors that which are invoked automataically once the 
+instance of the class created. These constructors can be overloaded. 
+
+Strings are immutable in java. 
+
+Where the Strings will be stored ???
+
+
+In STACK or HEAP 
+
+java.lang.Object is the top level class 
+
+    toString()
+
+    hashCode() : Returns the memory location address number. 
+
+
+Properties allows you to control the internal behaviour of the variable. If you want to represent any method as a field, then we need the help of properies. 
+
+There are 3 types of properties as 
+
+1) read-only : 
+
+2) write-only
+
+3) read/write property
+
+
+Property will have both getters and setters. 
+
+Assume, we have to a 2 fields as 
+
+private int empno;
+private String name; 
+
+
+To above things, if you want to define getter and setter, then 
+
+public int getEmpno() {
+   return empno;
+}
+
+
+For writing the property. 
+
+public void setEmpno(int argEmpno) {
+  this.empno = argEmpno;
+}
+
+for name, we have to write getters and setters 
+
+public String getName() {
+ return name;
+}
+
+public void setName(String argName) {
+this.name = argName;
+}
+
+
+*** For Read-only properties, we dont have any setter ***
+
+*** For Write-Only Properties, we dont have any getter ***
+
+*** For Read/Write Properties, we get both getters and setters ***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
